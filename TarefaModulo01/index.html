@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="botoes.js" defer></script>
+    <script src="badges.js" defer></script>
+    <script src="acoes.js" defer></script>
+    <title>Exemplo Componentes</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div><img src="imgs/unisinos-logo.svg">Sistemas para Internet – 2022/01</div>
+            <h1>Tarefa Módulo 1</h1>
+            <h4>Paula Mühlbach</h4>
+        </div>
+    </header>
+<main>
+    <h2>FRAMEWORKS PARA DESENVOLVIMENTO WEB</h2>
+    Elabore exemplos de páginas que compartilhem esses componentes.</br>
+    Enviar vídeo autoexplicativo demostrando os componentes desenvolvidos. Enviar códigos fontes em conjunto o arquivo  <custom-badge badge="warning" valor="README"></custom-badge>.</p>
+    
+    <div id="botoesacoes">
+        <p>depois, começam os botões de ações</p>
+       <div><a href="#"><link-acao icon="share"></link-acao></a></div> 
+     
+    </div>
+
+    <custom-button valor="Botão padrão"></custom-button>
+    <custom-button valor="Botão padrão desabilitado" disable="S"></custom-button>
+    <custom-button button="outline" valor="Botão alternativo"></custom-button>
+    <custom-button button="outline" valor="Botão alternativo desabilitado" disable="S"></custom-button>
+    
+    <div>
+        <p>Teste com badges, com vários tipos.</p>
+        <p> O badge <custom-badge badge="primary" valor="primary"></custom-badge></p>
+        <p> O badge <custom-badge badge="secondary" valor="secondary"></custom-badge></p>
+        <p> O badge <custom-badge badge="success" valor="success"></custom-badge></p>
+        <p> O badge <custom-badge badge="danger" valor="danger"></custom-badge></p>
+        <p> O badge <custom-badge badge="warning" valor="warning"></custom-badge></p>
+        <p> O badge <custom-badge badge="light" valor="light"></custom-badge></p>
+    </div>
+
+</main> 
+</body>
+</html>                                                                             
