@@ -8,7 +8,7 @@ class linkAcao extends HTMLElement {
         const icon = document.createElement('div')
         
     
-        shadow.appendChild(icon)
+        shadow.appendChild(icon);
 
         const tipo = this.getAttribute('icon')
         
@@ -25,7 +25,7 @@ class linkAcao extends HTMLElement {
             icon.setAttribute('class', 'ausente')
         }
 
-        const style = document.createElement('style')
+        const style = document.createElement('style');
 
         style.textContent = `
 
@@ -52,7 +52,7 @@ class linkAcao extends HTMLElement {
 
       
     `       
-        shadow.appendChild(style)
+        shadow.appendChild(style);
        
 
     }

@@ -43,6 +43,7 @@ h2{
     font-size: 24px;
     line-height: 28px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     color: #4D88A9;
 }
