@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="botoes.js" defer></script>
+    <script src="badges.js" defer></script>
+    <script src="acoes.js" defer></script>
+    <script src="header.js"></script>
+    <title>Tarefa Módulo 1</title>
+</head>
+<body>
+   
+    <header>
+        <custom-header></custom-header>
+    </header>
+    <main>
+        <h2>Componente: CUSTOM-BUTTON</h2>
+        
+            <p>Foram criados 2 modelos de botões para esta tarefa. O botão padrão e o botão alternativo.</p>
+            <div class="coluna">
+                <div class="linha"> 
+                    <h4>Botão Padrão</h4>
+                    <custom-button valor="Botão padrão"></custom-button>
+                    
+                </div>
+                <div class="linha"> 
+                    <h4>Botão Alternativo (outline)</h4>
+                    <custom-button button="outline" valor="Botão alternativo"></custom-button>
+                    
+                </div>
+            </div>
+
+            <h3>Atributos do custom-buttom</h3>
+            <p>Os atributos deste elemento são <b>"button"</b>, <b>"disable"</b> e <b>"valor"</b>.</p>
+            <p>O atributo <b>"button"</b> pode receber apenas o valor <i>"outline"</i>. 
+                Neste caso, é exibido o botão alternativo. Quando o atributo não é declarado, o botão padrão é exibido.</p>
+            <p>O atributo <b>"disable"</b> é utilizado para habilitar ou desabilitar o botão. Os botões são habilitados por padrão. 
+                Para desabilitar, basta declarar o atributo com o valor <i>"S"</i>.</p>
+            <div class="coluna">
+                <custom-button valor="Botão padrão desabilitado" disable="S"></custom-button>
+                <custom-button button="outline" valor="Botão alternativo desabilitado" disable="S"></custom-button>  
+            </div>  
+           
+
+            <p>O atributo <b>"valor"</b> recebe os valores de texto para ser exibido no custom-buttom.</p>
+
+            <custom-button valor="Texto qualquer"></custom-button>
+            
+            <div class="retornar">
+                <a href="index.html"><custom-button button="outline" valor="<< Retornar"></custom-button></a>
+            </div> 
+        
+    </main> 
+</body>
+</html>                                                                             

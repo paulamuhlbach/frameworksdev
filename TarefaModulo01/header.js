@@ -12,13 +12,14 @@ class CustomHeader extends HTMLElement {
         logo.src = 'imgs/unisinos-logo.svg';
         logo.width = 200;
         logo.alt = "Logo da unisinos";
+        logo.title = "Logotipo da Unisinos";
 
-        const disciplina = document.createElement('p');
-        disciplina.innerText = this.getAttribute('disciplina');
-        disciplina.setAttribute('class', 'txt-disciplina');
+        const txtdisciplina = document.createElement('p');
+        txtdisciplina.textContent = '2022/01 | Sistemas para Internet';
+        txtdisciplina.setAttribute('class', 'txt-disciplina');
 
         const h1= document.createElement('h1');
-        h1.innerText = this.getAttribute('titulo');
+        h1.textContent = 'Tarefa Módulo 1'
         h1.setAttribute('class', 'titulo-pagina');
 
         const infos = document.createElement('div');
@@ -27,7 +28,7 @@ class CustomHeader extends HTMLElement {
 
 
         const h4= document.createElement('h4');
-        h4.innerText = this.getAttribute('aluno');
+        h4.textContent = 'Paula Mühlbach'
         h4.setAttribute('class', 'nome-aluno');
 
         shadow.appendChild(containerHeader);
@@ -35,7 +36,7 @@ class CustomHeader extends HTMLElement {
         containerHeader.appendChild(h1);
         containerHeader.appendChild(infos);
         infos.appendChild(h4);
-        infos.appendChild(disciplina);
+        infos.appendChild(txtdisciplina);
 
 
 
@@ -51,12 +52,11 @@ class CustomHeader extends HTMLElement {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
+            
         }
         .container-infos{
             display: flex;
-            flex-direction: row;
-            align-items: center;
+            flex-direction: column;
         }
         .titulo-pagina{
             font-style: normal;

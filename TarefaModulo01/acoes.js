@@ -7,53 +7,57 @@ class linkAcao extends HTMLElement {
 
         const icon = document.createElement('div')
         
+        const share = document.createElement('img');
+        share.src = 'imgs/share.svg';
+        share.height = '18';
+        share.alt = "Compartilhar";
+        share.title = "Compartilhar";
     
-        shadow.appendChild(icon);
+        const download = document.createElement('img');
+        download.src = 'imgs/download.svg';
+        download.height = '18';
+        download.alt = "Download";
+        download.title = "Download";
 
-        const tipo = this.getAttribute('icon')
+        const print = document.createElement('img');
+        print.src = 'imgs/print.svg';
+        print.height = '18';
+        print.alt = "Imprimir";
+        print.title = "Imprimir";
+
+        const tipo = this.getAttribute('icon');
         
         if(tipo == "share"){
-            icon.setAttribute('class', 'share-icon')
+            icon.appendChild(share);
+            icon.setAttribute('class', 'icon');
         }
         else if(tipo == "download"){
-            icon.setAttribute('class', 'download-icon')
+            icon.appendChild(download);
+            icon.setAttribute('class', 'icon');
         }
         else if(tipo == "print"){
-            icon.setAttribute('class', 'print-icon')
+            icon.appendChild(print);
+            icon.setAttribute('class', 'icon');
         }
         else{
-            icon.setAttribute('class', 'ausente')
+            icon.setAttribute('class', 'ausente');
         }
 
         const style = document.createElement('style');
-
         style.textContent = `
 
-        .share-icon{
-            background-image: url(imgs/share.svg);
-            height: 18px;
-            background-repeat: no-repeat;
-        }
-        
-        .download-icon{
-            background-image: url(imgs/download.svg);
-            height: 18px;
-            background-repeat: no-repeat;
-        }
-        
-        .print-icon{
-            background-image: url(imgs/print.svg);
-            height: 18px;
-            background-repeat: no-repeat;
+        .icon{
+            margin-left: 5px;
+            margin-right: 5px;
         }
         .ausente{
             display:hidden;
+            
         }
-
-      
-    `       
-        shadow.appendChild(style);
-       
+   
+    `
+        shadow.appendChild(style)
+        shadow.appendChild(icon);
 
     }
 }

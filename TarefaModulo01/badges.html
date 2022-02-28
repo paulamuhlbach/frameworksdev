@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="botoes.js" defer></script>
+    <script src="badges.js" defer></script>
+    <script src="acoes.js" defer></script>
+    <script src="header.js"></script>
+    <title>Tarefa Módulo 1</title>
+</head>
+<body>
+   
+    <header>
+        <custom-header></custom-header>
+    </header>
+    <main>
+        <h2>Componente: CUSTOM-BADGE</h2>
+        
+            <p>Badges são utilizados para destacar expressões ou dados, como etiquetas. Foram criados 6 tipos de badges, 
+                para utilizar conforme o tipo de destaque a ser atribuido.</p>
+            <div>
+                <h3>Atributos do custom-badge</h3>
+                <p>O atributo <b>"badge"</b> do elemento custom-badge pode receber os seguintes valores, conforme as opções de estilo desejadas: 
+                    <custom-badge badge="primary" valor="primary"></custom-badge>, 
+                    <custom-badge badge="secondary" valor="secondary"></custom-badge>, 
+                    <custom-badge badge="success" valor="success"></custom-badge> , 
+                    <custom-badge badge="danger" valor="danger"></custom-badge> ou 
+                    <custom-badge badge="warning" valor="warning"></custom-badge>. <br> 
+                </p>
+                <p>O valor padrão para o atributo badge é <custom-badge valor="light"></custom-badge>, 
+                    quando não for atruibuido nenhum valor explícito de estilo, acima mencionado. </p>
+                    
+                <p>O atributo <b>"valor"</b> recebe os valores de texto para ser exibido no custom-badge.</p>
+
+                <p> Aqui o valor do atributo <b>"valor"</b> é <custom-badge badge="primary" valor="qualquer texto"></custom-badge>.</p>
+                
+            </div>
+
+            <div class="retornar">
+                <a href="index.html"><custom-button button="outline" valor="<< Retornar"></custom-button></a>
+            </div>      
+    </main>
+   
+</body>
+</html>                                                                             
