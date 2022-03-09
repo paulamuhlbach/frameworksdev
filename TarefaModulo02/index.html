@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="botoes.js" defer></script>
+    <script src="badges.js" defer></script>
+    <script src="acoes.js" defer></script>
+    <script src="header.js"></script>
+    <title>Tarefa Módulo 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <header>
+        <custom-header></custom-header>
+    </header>
+    <main>
+        <h2>Lista de Tarefas</h2>
+        <textarea id="texto">1234 - Novo Portal XPTO, HU 2235 - Desenvolvimento do Mapa do Site,Backlog;
+            1234 - Novo Portal XPTO,HU 2235 - HU 2198 -  Desenvolver back-end para crud de criação de páginas,Backlog;
+            1241 - Ordenador de Serviços,HU 2322 - Desenvolvimento Backend,Teste;
+            1241 - Ordenador de Serviços,HU 2235 - Documentação,Backlog;
+            1234 - Novo Portal XPTO,HU 2235 - Desenvolver Front-end para gerenciamento de páginas no menu,Em andamento;
+            1235 - Novo Portal XPTO, HU 2235 - Desenvolvimento do Mapa do Site,Backlog;
+            1235 - Novo Portal XPTO,HU 2235 - HU 2198 -  Desenvolver back-end para crud de criação de páginas,Sprint;
+            1241 - Ordenador de Serviços,HU 2322 - Desenvolvimento Backend,Teste;
+            1243 - Ordenador de Serviços,HU 2235 - Documentação,Não homologada;
+            1234 - Novo Portal XPTO,HU 2235 - Desenvolver Front-end para gerenciamento de páginas no menu,Em andamento</textarea>
+
+            <custom-button button="outline" valor="Carregar tabela" onclick="criarTabela()" id="carregar" disable="N"></custom-button> 
+        <table id="tarefas">
+            <tr class="header-tabela">
+                <th>Projeto</th>
+                <th>Tarefa</th>
+                <th>Situação</th>
+            </tr>
+        </table>  
+
+    </main>
+   
+</body>
+</html>      
+
+<script>
+    
+     const badgeType = ['light','primary', 'secondary', 'success', 'danger', 'warning'];
+     const texto = $('#texto');
+     const strings = texto[0].value.split(';');
+    
+
+    function criarTabela() {
+        const itens = [];
+        const tab = $('#tarefas')[0];
+        const customBadge = $('<custom-badge>');
+        for (let index = 0; index < strings.length; index++) {
+            const element = strings[index];
+            const campos = element.split(',');
+            
+            let badgeTypeValue = campos[2];
+                if(campos[2] === 'Em andamento'){
+                        badgeTypeValue = badgeType[1];
+                }else if(campos[2] === 'Sprint'){
+                        badgeTypeValue = badgeType[2];
+                }else if(campos[2] === 'Homologada'){
+                        badgeTypeValue = badgeType[3];
+                }else if(campos[2] === 'Não homologada'){
+                        badgeTypeValue = badgeType[4];
+                }else if(campos[2] === 'Teste'){
+                        badgeTypeValue = badgeType[5];
+                }else{
+                        badgeTypeValue = badgeType[0];
+                }
+                
+            const tr = $('<tr class="linha-tabela"><td class="td-tabela">' 
+                + campos[0] + '</td><td class="td-tabela">' 
+                + campos[1] + '</td><td td-tabela><custom-badge badge = ' 
+                + badgeTypeValue
+                + ' valor="'
+                + campos[2] +'"></custom-badge></td></tr>')[0];
+             
+             ;   
+                
+            tab.appendChild(tr);   
+            
+           
+          
+        }
+      
+        
+    }
+
+
+
+    
+</script>
